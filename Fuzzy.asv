@@ -1,0 +1,51 @@
+function R=Fuzzy(S,n) 
+    maxDist=0
+    minDist=10000000
+    maxNN=0
+    minNN=10000000
+    prob=1
+    for i=1:1:n
+        maxDist=max(maxDist,S(i).distance)
+        minDist=min(minDist,S(i).distance)
+        maxNN=max(maxNN,S(i).NN)
+        minNN=min(minNN,S(i).NN)
+        
+        
+    for i=1:1:n
+        energy=S(i).E
+        energy=energy*2
+        newEnergy=energy
+        while newEnergy>=0.33
+            newEnergy=newEnergy-0.33
+        end
+        prob=min(prob,1 - (abs(0.165 - newEnergy))/0)
+        energy=floor(energy/0.33)
+        energy=min(energy,2)
+        
+        rch=S(i).Rch
+        rch=floor(rch/0.33)
+        rch=min(rch,2)
+        
+        NN=2
+        if (maxNN~=minNN)
+            NN=(S(i).NN - minNN)/(maxNN - minNN)
+            NN=floor(NN/0.33)
+            NN=min(NN,2)
+        end
+        dist=2
+        if (maxDist~=minDist)
+            dist=(S(i).distance - minDist)/(maxDist - minDist)
+            dist=floor(dist/0.33)
+            dist=min(dist,2)
+        end
+        prob=F(NN + 3*rch + 9*dist + 27*energy + 1)
+        mi=1
+        
+        
+    end
+    
+    
+
+end
+
+

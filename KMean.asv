@@ -1,0 +1,28 @@
+function R=KMean(S)
+centroid=10
+centroidArr=S(1:10)
+for i=1:1:200
+    dist=100000000000
+    for j=1:1:centroid
+        now=(S(i).xd-(centroidArr(j).xd) )^2 + (S(i).yd-(centroidArr(j).yd) )^2
+        if dist>now:
+            dist=min(dist,now)
+            S(i).cat=j
+        end
+    end
+end
+count=[0 0 0 0 0 0 0 0 0 0]
+for j=1:1:centroid
+    centroidArr(i).xd=0
+    centroidArr(i).yd=0
+end
+
+for i=1:1:200
+    centroidArr(S(i).cat).xd+=S(i).xd;
+    centroidArr(S(i).cat).yd+=S(i).yd;
+    count(S(i).cat)+=1
+    
+    
+
+        
+        
