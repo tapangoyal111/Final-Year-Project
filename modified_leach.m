@@ -276,10 +276,8 @@ for r=0:rmax
     STATISTICS.ENERGY(h+1,r+1)=sum(STATISTICS.ENERGY(:,r+1))/h;
 end
 
-S=KMean(S,n)
-for i=1:1:200
-    S(i).cat
-end
+S=KMean(S,n);
+
 first_dead=sum(first_dead_LEACH)/h;
 half_dead=sum(half_dead_LEACH)/h;
 all_dead=sum(all_dead_LEACH)/h;
