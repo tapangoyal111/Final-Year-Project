@@ -71,6 +71,7 @@ function R=Fuzzy(S,n)
             dist=min(dist,2);
         end
         prob=prob + F(NN + 3*rch + 9*dist + 27*energy + 1);
+        
         S(i).prob=prob;
     end
     R=S;

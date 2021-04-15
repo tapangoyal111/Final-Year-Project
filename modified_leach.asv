@@ -72,13 +72,12 @@ text(S(n+1).xd+1,S(n+1).yd-0.5,num2str(n+1));
 hold off ;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%{
 for i=1:1:n
     for j=1:1:n
         if i~=j
             if sqrt((S(i).xd - S(j).xd)^2 + (S(i).yd - S(j).yd)^2)<=
                 
-  %}          
+            
 countCHs=0;  %variable, counts the cluster head
 cluster=1;  %cluster is initialized as 1
 flag_first_dead=0; %flag tells the first node dead
