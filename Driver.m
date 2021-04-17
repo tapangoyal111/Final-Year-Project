@@ -64,6 +64,8 @@ plot(r,Stat1.DEAD(h+1,r+1));
 plot(r,Stat2.DEAD(h+1,r+1));
 title('Dead Nodes')
 legend("simple Leach","Proposed algorithm")
+xlabel('Rounds') 
+ylabel('No. of Nodes') 
 hold off;
 
 figure(12)
@@ -72,6 +74,8 @@ plot(r,Stat1.ALLIVE(h+1,r+1));
 plot(r,Stat2.ALLIVE(h+1,r+1));
 legend("simple Leach","Proposed algorithm")
 title('Live Nodes')
+xlabel('Rounds') 
+ylabel('No. of Nodes') 
 hold off;
 
 figure(3)
@@ -80,6 +84,8 @@ plot(r,Stat1.PACKETS_TO_BS(h+1,r+1));
 plot(r,Stat2.PACKETS_TO_BS(h+1,r+1));
 legend("simple Leach","Proposed algorithm")
 title('pkts to BS')
+xlabel('Rounds') 
+ylabel('No. of Packets') 
 hold off;
 
 figure(4)
@@ -88,6 +94,8 @@ plot(r,Stat1.PACKETS_TO_BS_PER_ROUND(h+1,r+1));
 plot(r,Stat2.PACKETS_TO_BS_PER_ROUND(h+1,r+1));
 title('pkts to BS per round')
 legend("simple Leach","Proposed algorithm")
+xlabel('Rounds') 
+ylabel('No. of Packets') 
 hold off;
 
 figure(5)
@@ -96,6 +104,8 @@ plot(r,Stat1.PACKETS_TO_CH(h+1,r+1));
 plot(r,Stat2.PACKETS_TO_CH(h+1,r+1));
 legend("simple Leach","Proposed algorithm")
 title('pkts to CH')
+xlabel('Rounds') 
+ylabel('No. of Packets') 
 hold off;
 
 figure(6)
@@ -104,6 +114,8 @@ plot(r,Stat1.THROUGHPUT(h+1,r+1));
 plot(r,Stat2.THROUGHPUT(h+1,r+1));
 legend("simple Leach","Proposed algorithm")
 title('THROUGHPUT')
+xlabel('Rounds') 
+ylabel('throughput') 
 hold off;
 
 figure(7)
@@ -112,6 +124,8 @@ plot(r,Stat1.COUNTCHS(h+1,r+1));
 plot(r,Stat2.COUNTCHS(h+1,r+1));
 legend("simple Leach","Proposed algorithm")
 title('COUNTCHS')
+xlabel('Rounds') 
+ylabel('Number of CH') 
 hold off;
 
 figure(8)
@@ -120,5 +134,7 @@ plot(r,Stat1.ENERGY(h+1,r+1));
 plot(r,Stat2.ENERGY(h+1,r+1));
 legend("simple Leach","Proposed algorithm")
 title('Average Residual Energy') 
+xlabel('Rounds') 
+ylabel('Joule') 
 hold off;
 
